@@ -1,0 +1,40 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+    <!--Formulario-->
+    <div class="container">
+        <br>
+        <h1>¡Iniciar sesión!</h1>
+        <form action="{% url 'home' %}" method="GET" id="login">
+            {% csrf_token %}
+            <br>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" name="password" class="form-control" placeholder="Ingrese contraseña (min 6 caracteres)">
+            </div>
+            <br>
+            <!--Boton de acción para registro de usuario-->
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <br>
+        </form>
+        <br>
+        <div>
+            <label>¿Olvidaste el nombre de tu cuenta? </label>
+            <a href=#>Recuperar Nombre</a>
+            <br>
+            <br>
+            <label>¿Olvidaste tu contraseña? </label>
+            <a href=#>Recuperar Contraseña</a>
+        </div>
+        <br>
+    </div>
+    <!--Formulario finished-->
+
+{% endblock contenido%}

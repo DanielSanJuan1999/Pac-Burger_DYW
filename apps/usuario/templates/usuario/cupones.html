@@ -1,0 +1,50 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+<!--Content page-->
+<div class="center "id="main-content">
+    <h2>¡Canjea cupones!</h2>
+    <br>
+    <div id="cupones">
+        <div class="container">
+            <div class="row">
+                    <div class="center col-xs-6">
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <div id="u-name">"HIGHSCORE":</div>
+                            <div id="u-name">20000 ptos</div>
+                            <br>
+                            <a href="{% url 'perfil' %}" class="aceptar btn btn-secondary btn-lg">¡Canjear!</a>
+                    </div>
+                <div class="center col-xs-6">
+                    <!--Imagenes-->
+                    <div>
+                        <br>
+                        <h5>Costo: 8000 ptos.</h5><input id="cupon1" class="cupones" type="image" src="{% static 'usuario/img/cupones/cupon1.jpg' %}"><audio id="cup1-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <div>
+                        <h5>Costo: 36000 ptos.</h5><input id="cupon2" class="cupones" type="image" src="{% static 'usuario/img/cupones/cupon2.jpg' %}"><audio id="cup2-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <div>
+                        <h5>Costo: 42000 ptos.</h5><input id="cupon3" class="cupones" type="image" src="{% static 'usuario/img/cupones/cupon3.jpg' %}"><audio id="cup3-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <!--Imagenes Finished-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h3>Aquí podrás canjear cupones de descuento con los puntos que hayas acomulado en tus compras.</h3>
+    <br>
+</div>
+<!--Content page finished-->
+
+{% endblock contenido%}

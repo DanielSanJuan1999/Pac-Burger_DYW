@@ -3,20 +3,260 @@ footer{
     background-color: lightgray;
 }
 
-#margwind{
-    margin: 35px;           
+body{
+    background-color: black;
 }
 
-a{font-family: 'Press Start 2P', cursive;}
+#margwind{
+    margin: 35px;
+    text-align: center;
+    background-color: darkgray;          
+}
 
-h1{font-family: 'Press Start 2P', cursive;}
+#menu{
+    margin: 35px;
+    text-align: center;
+}
 
-h2{font-family: 'Press Start 2P', cursive;}
+#logeo{
+    margin: 35px;
+}
 
-h3{font-family: 'Press Start 2P', cursive;}
+#nuevo-usuario{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 350px;
+    border-radius: 5px;
+    border: 3px solid rgba(0, 0, 0, 0.700);
+    background-color: rgba(128, 128, 128, 0.700);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    align-content: center;
+    box-sizing: border-box;
+    margin-top: 50px;
+    margin-right: 50px;
+}
 
-h4{font-family: 'Press Start 2P', cursive;}
+#profile{
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    width: auto;
+    height: auto;
+    margin-top: -0.5%;
+    border-radius: 5px;
+    border: 3px solid black;
+    background-color: white;
+}
 
-h5{font-family: 'Press Start 2P', cursive;}
+#cupones{
+    margin-left: 100px;
+    margin-right: 100px;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    border: 3px solid black;
+    background-color: white;
+}
 
-h6{font-family: 'Press Start 2P', cursive;}
+.center{
+    text-align: center;
+}
+
+label{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    color: white;
+}
+
+p{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    color: white;
+}
+
+a{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    color: white;
+}
+
+h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    color: white;
+}
+
+h3{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    color: white;
+}
+
+h4{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 20px;
+    color: white;
+}
+
+h5{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+}
+
+h6{
+    margin: right;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    color: white;
+}
+
+
+.prof-edit{
+    width: 120px;
+    height: 120px;
+    margin: 15px;
+    border: 2px solid black;
+    border-radius: 2px;
+}
+
+.cupones{
+    width: 300px;
+    height: 120px;
+    margin: 15px;
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+#cupon-op
+{
+    margin-left: 125px;
+    margin-top: 100px;
+}
+
+/*Codigo CSS juego*/
+  
+#character_box {
+  width: 335px;
+  height: 370px;
+  border-radius: 5px;
+  border: 3px solid black;
+  background-color: grey;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  margin-top: 50px;
+  margin-right: 50px;
+}
+
+#price_box{
+    width: 335px;
+    height: 40px;
+    border-radius: 5px;
+    border: 3px solid black;
+    background-color: grey;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 25px;
+    margin-right: 50px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+}
+
+#total_box{
+    width: 335px;
+    height: 40px;
+    border-radius: 5px;
+    border: 3px solid black;
+    background-color: grey;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    box-sizing: border-box;
+    margin-top: 25px;
+    margin-right: 50px;
+    margin-bottom: 15px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+}
+
+.continue{
+    width: 300px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: 3px solid grey;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    background-color: darkgrey;
+}
+
+.edit{
+    width: 300px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+    border-radius: 5px;
+    border: 3px solid rgba(128, 128, 128, 0.75);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    background-color: rgba(169, 169, 169, 0.75);
+}
+
+.aceptar{
+    margin-right: 30px;
+    background-color: darkgrey;
+}
+
+.button{
+    width: 150px;
+    margin-top: 25px;
+    margin-right: 35px;
+    border-radius: 5px;
+    border: 3px solid darkgoldenrod;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    background-color: gold;
+}
+
+.grid-container {
+    background-color: darkgrey;
+    display: inline-grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto;
+    padding: 15px;
+}
+
+.grid-item {
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    margin-top: 12px;
+}
+
+.content-area{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 100px;
+    margin-left: 100px;
+    text-align: center;
+}
+
+#div1 {
+    width: 550px;
+    height: 150px;
+    padding: 35px;
+    margin: 30px;
+    border: 1px solid black;
+}

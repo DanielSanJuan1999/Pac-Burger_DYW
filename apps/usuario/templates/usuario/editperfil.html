@@ -1,0 +1,47 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+<!--Content page-->
+<main>
+    <div id="main-content">
+        <div id="profile">
+            <div class="container">
+                <div class="row">
+                    <div class="center col-xs-4">
+                        <div id="profile-d">
+                            <div id="profile_pic"></div>
+                        </div>
+                        <a href="{% url 'perfil' %}" class="aceptar btn btn-secondary btn-lg">¡Ok!</a>
+                    </div>
+                    <div class="center col-xs-8">
+                        <!--Imagenes-->
+                        <div>
+                            <input id="ryuprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/ryu-prof.png' %}"><audio id="ryuprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio> 
+                            <input id="kenprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/ken-prof.png' %}"><audio id="kenprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="chunprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/chun-prof.png' %}"><audio id="chunprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="cammyprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/cammy-prof.png' %}"><audio id="cammyprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                        </div>
+                        <div>
+                            <input id="terryprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/terry-prof.png' %}"><audio id="terryprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="ioriprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/iori-prof.png' %}"><audio id="ioriprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="maryprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/mary-prof.png' %}"><audio id="maryprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="leonaprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/leona-prof.png' %}"><audio id="leonaprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                        </div>
+                        <div>
+                            <input id="badguyprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/sol_badguy-prof.png' %}"><audio id="badguyprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="kiskeprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/kiske-prof.png' %}"><audio id="kiskeprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="baikenprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/baiken-prof.png' %}"><audio id="baikenprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                            <input id="milliaprof" class="prof-edit" type="image" src="{% static 'usuario/img/prof-pic/millia-prof.png' %}"><audio id="milliaprof-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                        </div>
+                        <!--Imagenes Finished-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!--Content page finished-->
+
+{% endblock contenido%}

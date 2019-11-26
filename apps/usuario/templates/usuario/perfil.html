@@ -1,0 +1,43 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+<!--Content page-->
+<main>
+    <div id="main-content">
+        <div id="profile">
+            <a href="{% url 'home' %}" class="logout btn btn-secondary btn-lg">Cerrar Sesión</a>
+            <div class="container">
+                <div class="row">
+                    <div class="center col-xs-4">
+                        <div id="profile-d">
+                            <div id="profile_pic"></div>
+                        </div>
+                        <div id="u-name">"HIGHSCORE":</div>
+                        <div id="u-name">20000 ptos</div>
+                        <br>
+                    </div>
+                    <div class="center col-xs-8">
+                        <br>
+                        <div id="u-name">Daniel San Juan</div>
+                        <br>
+                        <br>
+                        <br>
+                        <div id="u-name">"Correo":</div>
+                        <div id="u-name">example@email.com</div>
+                        <br>
+                        <br>
+                        <div id="u-name">"Fecha Nac.":</div>
+                        <div id="u-name">17/07/1999</div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="{% url 'editperfil' %}" class="edit btn btn-secondary btn-lg">Editar perfil</a>
+</main>
+<!--Content page finished-->
+
+{% endblock contenido%}

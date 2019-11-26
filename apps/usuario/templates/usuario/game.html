@@ -1,0 +1,81 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+        <!--Contenido Videojuego-->
+
+        <div class="container">
+            <div class="row center-xs" id="margwind">
+                <div class="col-xs-12 col-sm-8">
+                    <br>
+                    <h1>¡Elige tu peleador!</h1>
+                </div>
+                <div>
+                    <div id="character_box"></div>
+                    <div id="price_box"></div>
+                    <div>
+                        <button id="suma" type="button" class="button btn btn-secondary btn-lg">¡Añadir!</button>
+                        <button id="total" type="button" class="button btn btn-secondary btn-lg">¡Comprar!</button>
+                    </div>
+                    <div id="total_box"></div>
+                </div>
+                <div class="grid-container" id="margwind">
+                    <!--Ken-->
+                    <div class="grid-item" id="ken" data-toggle="tooltip" title="Hamburguesa Ken">
+                        <img src="{% static 'usuario/img/Ken.png' %}" alt="ken_img"></img>
+                        <audio id="ken-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <!--Ryu-->
+                    <div class="grid-item" id="ryu" data-toggle="tooltip" title="Hamburguesa Ryu"> 
+                        <img src="{% static 'usuario/img/Ryu.png' %}" alt="ryu_img"></img>
+                        <audio id="ryu-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <!--Promo Street Fighter-->
+                    <div class="grid-item" id="sf" data-toggle="tooltip" title="Promo Street Fighter">
+                        <img src="{% static 'usuario/img/StreetFighter.png' %}" alt="sf_img"></img>
+                        <audio id="sf-audio" src="{% static 'usuario/img/sound/089.wav' %}"></audio>                        
+                    </div>
+                    <!--Iori-->
+                    <div class="grid-item" id="iori" data-toggle="tooltip" title="Hamburguesa Iori">
+                        <img src="{% static 'usuario/img/Iori.PNG' %}" alt="link_img"></img>
+                        <audio id="iori-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <!--Terry-->
+                    <div class="grid-item" id="terry" data-toggle="tooltip" title="Hamburguesa Terry">
+                        <img src="{% static 'usuario/img/Terry.PNG' %}" alt="terry_img"></img>
+                        <audio id="terry-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>
+                    </div>
+                    <!--Promo king of Fighters-->
+                    <div class="grid-item" id="kof" data-toggle="tooltip" title="Promo King of fighters">
+                        <img src="{% static 'usuario/img/kof.PNG' %}" alt="kof_img"></img>
+                       <audio id="kof-audio" src="{% static 'usuario/img/sound/ANA_TI_00000.wav' %}"></audio>                        
+                    </div>
+                    <!--Valentine-->
+                    <div class="grid-item" id="valentine" data-toggle="tooltip" title="Hamburguesa Valentine">
+                        <img src="{% static 'usuario/img/Valentine.png' %}" alt="nakoruru_img"></img>
+                        <audio id="valentine-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>                        
+                    </div>
+                    <!--Filia-->
+                    <div class="grid-item" id="filia" data-toggle="tooltip" title="Hamburguesa Filia">
+                        <img src="{% static 'usuario/img/Filia.png' %}" alt="haohmaru_img"></img>
+                        <audio id="filia-audio" src="{% static 'usuario/img/sound/select.wav' %}"></audio>                        
+                    </div>
+                    <!--Promo Skullgirls-->
+                    <div class="grid-item" id="sg" data-toggle="tooltip" title="Promo Skullgirls">
+                        <img src="{% static 'usuario/img/Skullgirls.png' %}" alt="sg_img"></img>
+                        <audio id="skullgirls-audio" src="{% static 'usuario/img/sound/SE_00098.wav' %}"></audio>                        
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="content-area">
+            <h3>
+                ¡Bienvenido! Aquí podrás armar tu propio pedido sin la necesidad de hacer fila en nuestras sucursales,
+                te encontrarás con increibles personajes de reconocidos juegos de pelea, incluyendo a sus respectivas sagas.
+                Elige tu peleador y acumula "Puntos Fighters" que podrás canjear por asombrosos cupones en la siguiente compra.
+            </h3>
+        </div>
+    </div>
+
+{% endblock contenido%}

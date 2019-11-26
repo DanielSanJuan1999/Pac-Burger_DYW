@@ -12,77 +12,88 @@
     <link rel="stylesheet" href="{% static 'usuario/css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'usuario/css/flexboxgrid.css' %}">
     <link rel="stylesheet" href="{% static 'usuario/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'usuario/css/juego.css' %}">
     <title>Pac-Burger: Inicio</title>
 </head>
-<body>
+<body onload="init();">
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: chocolate">
-            <a class="navbar-brand" href="index.html">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: rgb(30, 20, 117)">
+            <a class="navbar-brand" href="{% url 'home' %}">Pac-Burger</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-          
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Iniciar sesión</a>
+                        <a class="nav-link" href="{% url 'login' %}">Iniciar sesión</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Crear Cuenta</a>
+                        <a class="nav-link" href="{% url 'signin' %}">Crear Cuenta</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Let's Play!</a>
+                        <a class="nav-link" href="{% url 'game' %}">Let's Play</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a id="navegador" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a id="navegador" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Mi Cuenta
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="perfil.html">Perfil</a>
-                            <a class="dropdown-item" href="#">Cupones mágicos</a>
-                            <a class="dropdown-item" href="#">Creador de plantillas</a>
+                            <a class="dropdown-item" href="{% url 'perfil' %}">Perfil</a>
+                            <a class="dropdown-item" href="{% url 'cupones' %}">Cupones</a>
                         </div>
                     </li>
                 </ul>
             </div>
         </nav>
+        <!--Navbar finished-->
         <div>
             {% block contenido %}
             
             {% endblock contenido %}    
         </div>
-        
-        <footer class="row center-xs">
+            <!--Footer-->
+            <footer class="row center-xs">
                 <div class="col-xs-12">
-                        <h5>Siguenos en nuestras redes sociales:</h5>
-                        <div class="row around-xs">
-                                <div class="col-xs-2">
-                                    <div class="box">
-                                            <a class="redes-sociales" href="https://www.instagram.com"><i class="fab fa-2x fa-instagram"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2">
-                                    <div class="box">
-                                            <a class="redes-sociales" href="https://www.facebook.com"><i class="fab fa-2x fa-facebook"> </i></a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2">
-                                    <div class="box">
-                                            <a class="redes-sociales" href="https://www.google.com"><i class="fab fa-2x fa-google-plus-g"></i></a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-2">
-                                    <div class="box">
-                                            <a class="redes-sociales" href="https://www.twitter.com"><i class="fab fa-2x fa-twitter-square"></i></a>
-                                    </div>
+                    <h5>Siguenos en nuestras redes sociales:</h5>
+                    <div class="row around-xs">
+                        <div class="col-xs-2">
+                            <div class="box">
+                                <a class="redes-sociales" href="https://www.instagram.com"><i class="fab fa-2x fa-instagram"></i></a>
                             </div>
-                </div>  
-        </footer>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="box">
+                                <a class="redes-sociales" href="https://www.facebook.com"><i class="fab fa-2x fa-facebook"> </i></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="box">
+                                <a class="redes-sociales" href="https://www.google.com"><i class="fab fa-2x fa-google-plus-g"></i></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-2">
+                            <div class="box">
+                                <a class="redes-sociales" href="https://www.twitter.com"><i class="fab fa-2x fa-twitter-square"></i></a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+            </footer>
+            <!--Footer finished-->
     </div>
     <!--Js Files-->
+
     <script src="{% static 'usuario/js/jquery-3.4.1.js' %}"></script>
+    <script src="{% static 'usuario/js/jquery.validate.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="{% static 'usuario/js/bootstrap.js' %}"></script>
+    <script src="{% static 'usuario/js/bootstrap.js' %}" ></script>
     <script src="{% static 'usuario/js/app.js' %}"></script>
+    <script src="{% static 'usuario/js/juego.js' %}"></script>
+
 </body>
 </html>

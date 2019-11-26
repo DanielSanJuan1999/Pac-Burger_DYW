@@ -1,0 +1,48 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+    <!--Formulario-->
+    <div class="container">
+            <form action="{% url 'resultado' %}" method="POST" id="formulario">
+                {% csrf_token %}
+                <br>
+                <div class="form-group">
+                    <label for="rut">Rut</label>
+                    <input type="text" name="rut" class="form-control" placeholder="Ingrese su rut (sin puntos ni guion)">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="nombre" class="form-control" placeholder="Ingrese su nombre">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="correo">Correo Electronico</label>
+                    <input type="email" name="email" class="form-control" placeholder="Ingrese correo">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="clave" class="form-control" placeholder="Ingrese contraseña (min 6 caracteres)">
+                </div>
+                <br>
+                <div class="form-group">
+                    <label for="fnac">Fecha de Nacimiento</label>
+                    <input type="date" name="fecha_nac" class="form-control">
+                </div>
+                <br>
+                <!--Boton de acción para registro de usuario-->
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <br>
+            <div>
+                <label>¿Ya tienes una cuenta?</label>
+                <a href="{% url 'login' %}">Iniciar Sesión</a>
+            </div>
+            <br>
+        </div>
+        <!--Formulario finished-->
+
+{% endblock contenido %}

@@ -1,0 +1,22 @@
+{% extends 'usuario/plantilla.html' %}
+
+{% block contenido %}
+
+{% load static %}
+        <!--Content-->
+        <div class="row center-xs">
+            <img src="{% static 'usuario/img/resultado.png' %}" alt="resultado.png">
+            <div id="nuevo-usuario">
+                    <br>
+                    <h2>Felicidades</h2>
+                    <br>
+                    <h4>
+                        Gracias por registrarte en nuestro sitio. Ahora podrás contar con increibles beneficios 
+                        al estar aquí junto a nosotros.
+                    </h4>
+                    <a href="{% url 'login' %}" class="continue btn btn-secondary btn-lg">¡Gracias!</a>
+            </div>
+        </div>
+        <!--Content finished-->
+
+{% endblock contenido%}
